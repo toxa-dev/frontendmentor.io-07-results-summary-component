@@ -1,0 +1,312 @@
+:root {
+    /* ========== FONTS ========== */
+    
+    /* Primary Font */
+    --font: "Hanken Grotesk", serif;
+
+    /* ========== COLORS ========== */
+
+    /* --- PRIMARY COLORS --- */
+    --light-red: hsl(0, 100%, 67%);        /*  */
+    --orangey-yellow: hsl(39, 100%, 56%);  /* */
+    --green-teal: hsl(166, 100%, 37%);     /*  */
+    --cobalt-blue: hsl(234, 85%, 45%);     /* */
+
+    /* --- GRADIENTS --- */
+    --light-slate-blue: hsl(252, 100%, 67%); /*  */
+    --light-royal-blue: hsl(241, 81%, 54%);  /*  */
+    --violet-blue: hsla(256, 72%, 46%, 1);   /*  */
+    --persian-blue: hsl(234, 85%, 45%);      /*  */
+
+    /* --- NEUTRAL COLORS --- */
+    --white: hsl(0, 0%, 100%);        /*  */
+    --pale-blue: hsl(221, 100%, 96%); /* Background Color Page*/
+    --light-lavender: hsl(241, 100%, 89%); /* text */
+    --light-lavendar-transparent: hsla(241, 100%, 89%, 0.75);
+    --dark-gray-blue: hsl(224, 30%, 27%);  /* button background */
+}
+
+
+/* Flexbox */
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-col, 
+.flex-responsive {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Alignment & Justification */
+.flex-justify-center {
+    justify-content: center;
+}
+
+.flex-align-center {
+    align-items: center;
+}
+
+.flex-justify-between {
+    justify-content: space-between;
+}
+
+/* Grid */
+.grid {
+    display: grid;
+}
+
+.grid-center {
+    display: grid;
+    place-items: center;
+}
+
+/* Text */
+.text-center {
+    text-align: center;
+}
+
+
+.main-wrapper {
+    min-height: inherit;
+    background-color: var(--pale-blue);
+}
+
+.content-box {
+    width: 415px;
+    border-radius: 38px;
+
+    background-color: var(--white);
+    font-size: 18px;
+    font-family: var(--font);
+}
+
+.result {
+    padding: 37px 50px;
+    border-radius: 38px;
+    
+    background: linear-gradient(to bottom, 
+        var(--light-slate-blue), /* Light Slate Blue (Top) */
+        var(--light-royal-blue) /* Light Royal Blue (Bottom) */ 
+    );
+}
+
+.result-title {
+    color: var(--light-lavender);
+    font-size: 20px;
+}
+
+.result p {
+    color: var(--light-lavender);
+}
+
+.result .result-description {
+    color: var(--white);
+    font-weight: 700;
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.score-container {
+    width: 182px;
+    height: 182px;
+    border-radius: 50%;
+
+    margin: 25px 0 20px 0;
+
+    background: linear-gradient(to top, 
+        hsla(241, 81%, 54%, 0) 0%, 
+        hsla(234, 85%, 45%, 0.6) 100%,
+        hsla(234, 85%, 45%, 0.2) 100%
+    );
+    
+}
+
+.result .score-value {
+    color: var(--white);
+    font-size: 60px;
+    font-weight: 800;
+}
+
+.result .score-text {
+    font-size: 15px;
+    margin-top: -10px;
+    color: var(--light-lavendar-transparent);
+}
+
+
+
+.summary-container {
+    padding: 25px 35px 30px 35px;
+}
+
+.summary {
+    gap: 18px;
+}
+
+.summary h2 {
+    margin-bottom: 8px;    
+    font-size: 19px;
+}
+.summary-item h3 {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.summary-item p {
+    font-size: 17px;
+    word-spacing: 2px;
+}
+
+.summary-item .score-value {
+    font-weight: 700;
+}
+
+.summary-item .score-total {
+    color: hsl(0deg 0% 67.86%);
+    font-weight: 700;
+}
+
+.summary-item {
+    padding: 12px 17px;
+    padding-left: 45px;
+    border-radius: 8px;
+}
+
+.reaction {
+    background: hsl(0 100% 67% / 7%) url("assets/images/icon-reaction.svg") no-repeat 15px center;
+}
+
+.reaction h3 {
+    color: var(--light-red);
+}
+
+.memory {
+    background: hsl(39 100% 56% / 7%) url("assets/images/icon-memory.svg") no-repeat 15px center;
+}
+
+.memory h3 {
+    color: var(--orangey-yellow);
+}
+
+.verbal {
+    background: hsl(166 100% 37% / 7%) url("assets/images/icon-verbal.svg") no-repeat 15px center;
+}
+
+.verbal h3 {
+    color: var(--green-teal);
+}
+
+.visual {
+    background: hsl(234 85% 45% / 7%) url("assets/images/icon-visual.svg") no-repeat 15px center;
+}
+
+.visual h3 {
+    color: var(--cobalt-blue);
+}
+
+.button-wrapper {
+    margin-top: 25px;
+}
+
+.button-wrapper button {
+    width: 100%;
+    padding: 17px 0;
+    border-radius: 9999px;
+    color: var(--white); 
+    border: 0;
+
+    background: var(--dark-gray-blue); /* Solid color for default state */
+    position: relative; /* Ensure the button is positioned relative for the pseudo-element */
+    overflow: hidden; /* Prevent the gradient from overflowing */
+}
+
+.button-wrapper button span {
+    position: relative;
+    z-index: 2; /* Ensures text stays above gradient */
+}
+
+.button-wrapper button::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, var(--light-slate-blue), var(--light-royal-blue));
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    border-radius: 9999px;
+}
+
+.button-wrapper button:hover::before,
+.button-wrapper button:focus::before{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.button-wrapper button:focus {
+    outline: 2px solid var(--cobalt-blue);
+    outline-offset: 2px;
+}
+
+/* Small screens (default) */
+
+/* Medium screens (tablets) */
+@media (min-width: 768px) {
+    /* Styles for tablets and up */
+}
+
+/* Large screens (desktops) */
+@media (min-width: 1024px) {
+    /* Styles for desktops and up */
+    .flex-responsive {
+        flex-direction: row;
+    }
+
+    .content-box {
+        width: 700px
+    }
+
+    .content-box > * {
+        flex-basis: 50%;
+    }
+
+    p {
+        text-wrap: initial;
+    }
+
+    .summary-container {    
+        padding-top: 40px;
+        padding-bottom: 42px;
+    }
+    
+    .button-wrapper {
+        margin-top: 40px;
+    }
+
+    .score-container {
+        margin-top: 35px;
+        margin-bottom: 20px;
+    }
+
+    .summary h2,
+    .result-title {
+        font-size: 22px;
+    }
+
+    .summary h2 {
+        margin-bottom: 10px;
+    }
+
+    .summary-item h3 {
+        font-size: 17px;
+    }
+
+    .summary-item p {
+        font-size: 16px;
+    }
+}
+
+/* Extra large screens */
+@media (min-width: 1440px) {
+    /* Styles for large monitors */
+}
