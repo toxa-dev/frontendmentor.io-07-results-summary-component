@@ -80,6 +80,8 @@
     background-color: var(--white);
     font-size: 18px;
     font-family: var(--font);
+
+    box-shadow: 0px 0px 40px 1px var(--light-lavendar-transparent);
 }
 
 .result {
