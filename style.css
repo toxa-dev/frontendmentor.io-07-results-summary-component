@@ -1,29 +1,41 @@
 :root {
     /* ========== FONTS ========== */
-    
+
     /* Primary Font */
     --font: "Hanken Grotesk", serif;
 
     /* ========== COLORS ========== */
 
     /* --- PRIMARY COLORS --- */
-    --light-red: hsl(0, 100%, 67%);        /*  */
-    --orangey-yellow: hsl(39, 100%, 56%);  /* */
-    --green-teal: hsl(166, 100%, 37%);     /*  */
-    --cobalt-blue: hsl(234, 85%, 45%);     /* */
+    --light-red: hsl(0, 100%, 67%);
+    /*  */
+    --orangey-yellow: hsl(39, 100%, 56%);
+    /* */
+    --green-teal: hsl(166, 100%, 37%);
+    /*  */
+    --cobalt-blue: hsl(234, 85%, 45%);
+    /* */
 
     /* --- GRADIENTS --- */
-    --light-slate-blue: hsl(252, 100%, 67%); /*  */
-    --light-royal-blue: hsl(241, 81%, 54%);  /*  */
-    --violet-blue: hsla(256, 72%, 46%, 1);   /*  */
-    --persian-blue: hsl(234, 85%, 45%);      /*  */
+    --light-slate-blue: hsl(252, 100%, 67%);
+    /*  */
+    --light-royal-blue: hsl(241, 81%, 54%);
+    /*  */
+    --violet-blue: hsla(256, 72%, 46%, 1);
+    /*  */
+    --persian-blue: hsl(234, 85%, 45%);
+    /*  */
 
     /* --- NEUTRAL COLORS --- */
-    --white: hsl(0, 0%, 100%);        /*  */
-    --pale-blue: hsl(221, 100%, 96%); /* Background Color Page*/
-    --light-lavender: hsl(241, 100%, 89%); /* text */
+    --white: hsl(0, 0%, 100%);
+    /*  */
+    --pale-blue: hsl(221, 100%, 96%);
+    /* Background Color Page*/
+    --light-lavender: hsl(241, 100%, 89%);
+    /* text */
     --light-lavendar-transparent: hsla(241, 100%, 89%, 0.75);
-    --dark-gray-blue: hsl(224, 30%, 27%);  /* button background */
+    --dark-gray-blue: hsl(224, 30%, 27%);
+    /* button background */
 }
 
 
@@ -33,7 +45,7 @@
     flex-direction: row;
 }
 
-.flex-col, 
+.flex-col,
 .flex-responsive {
     display: flex;
     flex-direction: column;
@@ -87,11 +99,13 @@
 .result {
     padding: 37px 50px;
     border-radius: 38px;
-    
-    background: linear-gradient(to bottom, 
-        var(--light-slate-blue), /* Light Slate Blue (Top) */
-        var(--light-royal-blue) /* Light Royal Blue (Bottom) */ 
-    );
+
+    background: linear-gradient(to bottom,
+            var(--light-slate-blue),
+            /* Light Slate Blue (Top) */
+            var(--light-royal-blue)
+            /* Light Royal Blue (Bottom) */
+        );
 }
 
 .result-title {
@@ -117,12 +131,11 @@
 
     margin: 25px 0 20px 0;
 
-    background: linear-gradient(to top, 
-        hsla(241, 81%, 54%, 0) 0%, 
-        hsla(234, 85%, 45%, 0.6) 100%,
-        hsla(234, 85%, 45%, 0.2) 100%
-    );
-    
+    background: linear-gradient(to top,
+            hsla(241, 81%, 54%, 0) 0%,
+            hsla(234, 85%, 45%, 0.6) 100%,
+            hsla(234, 85%, 45%, 0.2) 100%);
+
 }
 
 .result .score-value {
@@ -148,9 +161,10 @@
 }
 
 .summary h2 {
-    margin-bottom: 8px;    
+    margin-bottom: 8px;
     font-size: 19px;
 }
+
 .summary-item h3 {
     font-weight: 500;
     font-size: 18px;
@@ -216,17 +230,21 @@
     width: 100%;
     padding: 17px 0;
     border-radius: 9999px;
-    color: var(--white); 
+    color: var(--white);
     border: 0;
 
-    background: var(--dark-gray-blue); /* Solid color for default state */
-    position: relative; /* Ensure the button is positioned relative for the pseudo-element */
-    overflow: hidden; /* Prevent the gradient from overflowing */
+    background: var(--dark-gray-blue);
+    /* Solid color for default state */
+    position: relative;
+    /* Ensure the button is positioned relative for the pseudo-element */
+    overflow: hidden;
+    /* Prevent the gradient from overflowing */
 }
 
 .button-wrapper button span {
     position: relative;
-    z-index: 2; /* Ensures text stays above gradient */
+    z-index: 2;
+    /* Ensures text stays above gradient */
 }
 
 .button-wrapper button::before {
@@ -240,7 +258,7 @@
 }
 
 .button-wrapper button:hover::before,
-.button-wrapper button:focus::before{
+.button-wrapper button:focus::before {
     opacity: 1;
     cursor: pointer;
 }
@@ -248,6 +266,18 @@
 .button-wrapper button:focus {
     outline: 2px solid var(--cobalt-blue);
     outline-offset: 2px;
+}
+
+.attribution {
+    font-size: 1em;
+    text-align: center;
+    color: #000;
+    padding-top: 10px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: var(--main-background);
 }
 
 /* Small screens (default) */
@@ -259,6 +289,7 @@
 
 /* Large screens (desktops) */
 @media (min-width: 1024px) {
+
     /* Styles for desktops and up */
     .flex-responsive {
         flex-direction: row;
@@ -268,7 +299,7 @@
         width: 700px
     }
 
-    .content-box > * {
+    .content-box>* {
         flex-basis: 50%;
     }
 
@@ -276,11 +307,11 @@
         text-wrap: initial;
     }
 
-    .summary-container {    
+    .summary-container {
         padding-top: 40px;
         padding-bottom: 42px;
     }
-    
+
     .button-wrapper {
         margin-top: 40px;
     }
