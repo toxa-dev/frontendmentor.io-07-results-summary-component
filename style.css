@@ -280,6 +280,12 @@
     background-color: var(--main-background);
 }
 
+@media only screen and (max-height: 740px) {
+    .attribution {
+        position: static;
+    }
+}
+
 /* Small screens (default) */
 
 /* Medium screens (tablets) */
