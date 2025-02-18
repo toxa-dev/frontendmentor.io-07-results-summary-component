@@ -272,17 +272,17 @@
     font-size: 1em;
     text-align: center;
     color: #000;
-    padding-top: 10px;
     position: absolute;
     bottom: 0;
     right: 0;
-    left: 0;
-    background-color: var(--main-background);
+    left: 0;    
+    background-color: var(--pale-blue);
 }
 
-@media only screen and (max-height: 740px) {
+@media only screen and (max-height: 900px) {
     .attribution {
         position: static;
+        padding-top: 10px;
     }
 }
 
